@@ -1,0 +1,59 @@
+DefaultContentLanguage: en
+languageCode: en-US
+
+# add these three lines to the main config file
+FootnoteReturnLinkContents: ↩
+pygmentsCodeFences: true
+pygmentsUseClasses: true
+
+params:
+  comments: true
+  toc: true
+  toc-wordcount: 1000
+  social:
+    - name: facebook
+      url: www.google.com
+    - name: twitter
+      url: www.google.com
+    - name: instagram
+      url: www.google.com
+    - name: tumblr
+      url: www.google.com
+    - name: github
+      url: www.google.com
+    - name: email
+      url: mailto:abc@example.com
+  style:
+    base-font-size: 14pt;
+    main-color: "#003151"
+    bg-color: "#FFFFFF"
+    dark-text-color: "#000000"
+    light-text-color: "#FFFFFF"
+    hover-color: "#ff9700"
+    text-marked-color: "#ffa"
+    button-style: 1
+    pagination-style: 1
+    simple-footer: false
+  about: |
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+
+menu:
+  main:
+  - name: Tags
+    url: /tags/
+    weight: 1
+  - name: Archive
+    url: /posts
+    weight: 2
+  - name: About
+    url: /about/
+    weight: 3
+
+languages:
+  en:
+    languageName: English
+    weight: 1
+  de:
+    languageName: Deutsch
+    weight: 2
+

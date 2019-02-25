@@ -1,0 +1,50 @@
+{{ define "main" }}
+{{ $paginator := .Paginate (where .Data.Pages "Type" "in" .Site.Params.mainSections) }}
+<main>
+  {{ range $paginator.Pages }}
+  <section id="home-posts">
+    <h1>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </h1>
+    <div class="metainfo">
+      {{ if not .Date.IsZero }}
+        <time>{{ .Date.Format "02 Jan 2006" }}</time>
+      {{ end }}
+      {{ if isset .Params "tags" }}
+      <p>
+        {{ range.Params.tags }}
+          <a href='{{ "/tags/" | relLangURL }}{{ . | urlize }}'>{{ . }}</a>
+        {{ end }}
+      </p>
+      {{ end }}
+    </div>
+    {{ if isset .Params "article_banner" }}
+      <p style="text-align: center">
+        <img src="{{ .Params.article_banner}}" alt="article banner" />
+      </p>
+    {{ end }}
+    <p>{{ .Summary }}
+      <a href="{{ .RelPermalink }}">{{ i18n "continue_reading" }}...</a>
+    </p>
+  </section>
+  {{ end }}
+
+  {{ if gt .Paginator.TotalPages 1 }}
+  <div class="pagination">
+    {{ if .Paginator.HasNext }}
+      <a href="{{ .Paginator.Next.URL | relURL }}" class="older"
+        >{{ partial "icon.html" "left" }}{{ i18n "older_posts" }}</a
+      >
+    {{ end }}
+    {{ if .Paginator.HasPrev }}
+      <a href="{{ .Paginator.Prev.URL | relURL }}" class="newer"
+        >{{ i18n "newer_posts" }}{{ partial "icon.html" "right" }}</a
+      >
+    {{ end }}
+  </div>
+  {{ end }}
+</main>
+
+{{ partialCached "sidebar.html" . }}
+
+{{ end }}

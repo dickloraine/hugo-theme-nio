@@ -1,0 +1,251 @@
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  display: grid;
+  grid-template:
+    "header" auto
+    "main  " 1fr
+    "footer" auto;
+  font-family: $body-font;
+  font-size: $base-font-size - 2;
+  text-align: justify;
+  margin: 0 auto 0 auto;
+  color: $text-color;
+  background-color: $background-color;
+
+  @include tablet {
+    font-size: $base-font-size - 1;
+    grid-template:
+      "header header" auto
+      "main   sidebar" 1fr
+      "footer footer" auto
+      / 5fr 2fr;
+  }
+
+  @include desktop {
+    font-size: $base-font-size;
+    grid-template:
+      "header header header" auto
+      "aside main   sidebar" 1fr
+      "footer footer footer" auto
+      / 1fr 2fr 1fr;
+  }
+}
+
+main {
+  grid-area: main;
+  max-width: $body-max-width;
+  margin: 0 2rem 0 2rem;
+}
+
+h1 {
+  font-family: $header-font;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-size: 1.5em;
+  text-align: $heading-alignment;
+  font-weight: bold;
+  text-indent: 0;
+  color: $headings-color;
+
+  a {
+    color: $headings-color;
+
+    &:focus,
+    &:active,
+    &:hover {
+      color: $headings-color;
+    }
+  }
+}
+
+h2 {
+  font-size: 1.3em;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+p {
+  margin: 0;
+  text-indent: 0;
+}
+
+p + p {
+  margin-top: 1em;
+}
+
+a {
+  color: $link-color;
+  transition: color, background 200ms ease-out;
+  text-decoration: none;
+  background: linear-gradient(
+    to bottom,
+    rgba($hover-color, 1) 0%,
+    rgba($hover-color, 1) 98%
+  );
+  background-size: 0px 2px;
+  background-repeat: no-repeat;
+  background-position: left 100%;
+
+  &:focus,
+  &:active,
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: none;
+    background-size: 100% 2px;
+  }
+}
+
+ul {
+  list-style: disc;
+}
+
+blockquote {
+  font-style: italic;
+}
+
+table {
+  width: 100%;
+  border-spacing: 0;
+
+  th,
+  td {
+    padding: 5px;
+  }
+
+  th {
+    border-bottom: 1px solid;
+  }
+
+  @if $table-hover == true {
+    tr:hover {
+      background-color: $table-hover-color;
+    }
+  }
+}
+
+a.footnoteRef {
+  vertical-align: super;
+}
+
+@if $footnote-highlight == true {
+  *[id^="fn"]:target {
+    background-color: $footnote-highlight-color;
+  }
+}
+
+.inline-svg {
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  position: relative;
+}
+
+.MathJax_CHTML {
+  font-size: 1em !important;
+}
+
+.metainfo {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+  color: $meta-color;
+  background-color: $meta-bg-color;
+
+  p,
+  time {
+    margin: 0;
+    font-family: $header-font;
+    font-style: italic;
+  }
+
+  a {
+    color: $meta-color;
+
+    &:focus,
+    &:active,
+    &:hover {
+      color: $meta-color;
+    }
+  }
+}
+
+.pagination {
+  display: grid;
+  grid-template: "older newer" / 1fr 1fr;
+  margin: 2em 0;
+  padding: 0.3em;
+
+  color: $pagination-text-color;
+  background-color: $pagination-bg-color;
+
+  a {
+    color: $pagination-text-color;
+    text-decoration: none;
+
+    &:hover {
+      color: $pagination-hover-text-color;
+    }
+
+    @if $pagination-style == 1 {
+    } @else {
+      background: none;
+
+      &:hover {
+        text-shadow: highlight-shadow($pagination-bg-color);
+      }
+    }
+  }
+
+  .older {
+    justify-self: start;
+    grid-area: older;
+  }
+
+  .newer {
+    justify-self: end;
+    grid-area: newer;
+  }
+
+  .inline-svg {
+    top: 0.15em;
+    margin-left: 0.3em;
+    margin-right: 0.3em;
+  }
+}
+
+.button-container {
+  text-align: center;
+  margin: 2em 1em;
+
+  button {
+    display: inline-block;
+    padding: 0.35em 1.2em;
+    border: 0.1em solid black;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: $header-font;
+    font-weight: 300;
+    color: $button-text-color;
+    background-color: $button-bg-color;
+    text-align: center;
+    transition: all 0.2s;
+
+    &:hover {
+      color: $button-hover-text-color;
+      @if $button-style == 1 {
+        background-color: $button-hover-bg-color;
+      } @else {
+        text-shadow: highlight-shadow($button-hover-bg-color);
+        background-color: highlight-color($button-hover-bg-color);
+      }
+    }
+  }
+}

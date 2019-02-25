@@ -1,0 +1,29 @@
+[about]
+other = "Über"
+
+[recent_posts]
+other = "Neueste Artikel"
+
+[tags]
+other = "Tags"
+
+[stay_in_touch]
+other = "Bleib in Kontakt"
+
+[site_links]
+other = "Seiten Links"
+
+[copyright]
+other = "Copyright"
+
+[older_posts]
+other = "Ältere Artikel"
+
+[newer_posts]
+other = "Neuere Artikel"
+
+[contents]
+other = "Inhalt"
+
+[continue_reading]
+other = "Weiterlesen"

@@ -1,0 +1,20 @@
+<aside id="sidebar">
+  <section id="about">
+    <h2>{{ i18n "about" }}</h2>
+    <p>{{ .Site.Params.about }}</p>
+  </section>
+
+  <section id="recent_posts">
+    <h2>{{ i18n "recent_posts" }}</h2>
+    {{ partialCached "recent_posts.html" . }}
+  </section>
+
+  <section id="tag-cloud">
+    <h2>{{ i18n "tags" }}</h2>
+    {{ partialCached "tag_cloud.html" . }}
+  </section>
+
+  <section id="social">
+    {{ partialCached "social.html" . }}
+  </section>
+</aside>

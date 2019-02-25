@@ -1,0 +1,26 @@
+{{ define "main" }}
+<main>
+  <article>
+    <header>
+      <h1>{{ .Title }}</h1>
+    </header>
+
+    {{ if isset .Params "article_banner" }}
+    <p style="text-align: center">
+      <img
+        src="{{ .Params.article_banner}}"
+        alt="article banner"
+        style="width: 100%; border: 1px solid black;"
+      />
+    </p>
+    {{ end }}
+
+    <!-- Use regex to wrap images in figures if an alt text is given -->
+    {{ partial "img2fig.html" . }}
+  </article>
+</main>
+
+{{ partialCached "sidebar.html" . }}
+
+{{ partial "toc.html" . }}
+{{ end }}

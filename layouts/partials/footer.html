@@ -1,0 +1,36 @@
+<footer>
+  {{ partial "scripts.html" . }}
+
+  <div class="wrapper">
+    <section id="about">
+      <h2>{{ i18n "about" }}</h2>
+      <p>{{ .Site.Params.about }}</p>
+    </section>
+
+    <section>
+      <h2>{{ i18n "stay_in_touch" }}</h2>
+      <p class="social">{{ partialCached "social.html" . }}</p>
+    </section>
+
+    <section>
+      <h2>{{ i18n "site_links" }}</h2>
+      <p><a href="/" title="Home">Home</a></p>
+      {{ with.Site.Menus.main }}
+      {{ range . }}
+      <p>
+        <a href="{{ .URL }}" title="{{ .Name }}">{{ .Name }}</a>
+      </p>
+      {{ end }}
+      {{ end }}
+    </section>
+  </div>
+
+  <div>
+    <p class="copyright">
+      {{ i18n "copyright" }} &copy; {{ now.Format "2006"}}
+      {{ .Site.Title }} &ndash; Powered by
+      <a target="_blank" href="https://gohugo.io">Hugo</a> and
+      <a target="_blank" href="https:/example.com">Nio</a> theme.
+    </p>
+  </div>
+</footer>

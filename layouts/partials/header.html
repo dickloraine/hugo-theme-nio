@@ -1,0 +1,19 @@
+<meta charset="utf-8" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0, user-scalable=yes"
+/>
+{{ if isset .Params "author" }}
+<meta name="author" content="{{ .Params.author }}" />
+{{ end }}
+<title>{{ .Title }}</title>
+<link
+  href="https://fonts.googleapis.com/css?family=Noto+Sans|Noto+Serif|Oswald"
+  rel="stylesheet"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css"
+/>
+<!-- stylesheets -->
+{{ partialCached "build_css.html" . }}

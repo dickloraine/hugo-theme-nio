@@ -1,0 +1,2 @@
+{{ $style := resources.Get "sass/main.scss" | resources.ExecuteAsTemplate "style.scss" . | toCSS (dict "targetPath" "css/main.css") | postCSS | minify | fingerprint }}
+<link href="{{ $style.RelPermalink }}" rel="stylesheet" />

@@ -1,0 +1,52 @@
+{{ define "main" }}
+<main>
+  <article id="post">
+    <header>
+      <h1>{{ .Title }}</h1>
+      <div class="metainfo">
+        {{ if not .Date.IsZero }}<time>{{ .Date.Format "02 Jan 2006" }}</time>
+        {{ end }}
+        {{ if isset .Params "tags" }}
+        <p>
+          {{ range.Params.tags }}
+          <a href='{{ "/tags/" | relLangURL }}{{ . | urlize }}'>{{ . }}</a>
+          {{ end }}
+        </p>
+        {{ end }}
+      </div>
+    </header>
+
+    {{ if isset .Params "article_banner" }}
+    <p style="text-align: center">
+      <img
+        src="{{ .Params.article_banner}}"
+        alt="article banner"
+        style="width: 100%; border: 1px solid black;"
+      />
+    </p>
+    {{ end }}
+
+    <!-- Use regex to wrap images in figures if an alt text is given -->
+    {{ partial "img2fig.html" . }}
+
+    {{ partial "disqus.html" . }}
+
+    <p class="pagination">
+      {{ with.PrevInSection }}{{ if . }}
+        <a href="{{ .RelPermalink }}" class="older"
+          >{{ partial "icon.html" "left" }}{{ .Title }}</a
+        >
+      {{ end }}{{ end }}
+      {{ with.NextInSection }}{{ if . }}
+        <a href="{{ .RelPermalink }}" class="newer"
+          >{{ .Title }}{{ partial "icon.html" "right" }}</a
+        >
+      {{ end }}{{ end }}
+    </p>
+  </article>
+</main>
+
+{{ partialCached "sidebar.html" . }}
+
+{{ partial "toc.html" . }}
+{{ end }}

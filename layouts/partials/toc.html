@@ -1,0 +1,10 @@
+{{ if and (gt .WordCount ($.Param "toc-wordcount")) ($.Param "toc") }}
+<aside id="article-toc">
+  <input class="trigger" type="checkbox" id="mainNavButton" />
+  <label for="mainNavButton" onclick></label>
+  <section>
+    <h2>{{ i18n "contents" }}</h2>
+    <div id="tocbot"></div>
+  </section>
+</aside>
+{{ end }}

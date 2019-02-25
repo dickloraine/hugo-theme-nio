@@ -1,0 +1,45 @@
+{{ if isset .Params "math" }}
+<script
+  type="text/javascript"
+  async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full"
+>
+  MathJax.Hub.Config({
+    tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: {
+      equationNumbers: { autoNumber: "AMS" },
+      qextensions: ["AMSmath.js", "AMSsymbols.js"] },
+    }
+  });
+</script>
+{{ end }}
+
+{{ if and (gt .WordCount ($.Param "toc-wordcount")) ($.Param "toc") }}
+<script src='{{ "js/tocbot.min.js" | relURL }}'></script>
+<script>
+  tocbot.init({
+    tocSelector: "#tocbot",
+    contentSelector: "#post",
+    headingSelector: "h1, h2, h3",
+    collapseDepth: 3,
+    orderedList: false
+  });
+</script>
+{{ end }}
+
+{{ if (eq .Section "posts") }}
+<script src='{{ "js/zooming.min.js" | relURL }}'></script>
+<script>
+  new Zooming({
+    bgColor: "rgb(255, 255, 255)",
+    bgOpacity: 1,
+    scaleBase: 0.7,
+    scaleExtra: 0.5
+  }).listen("img");
+</script>
+{{ end }}

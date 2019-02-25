@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    {{ partial "header.html" . }}
+  </head>
+  <body>
+    <header id="site-header">
+      <p>
+        <a href="/" title="{{ .Site.Title }}">{{ .Site.Title }}</a>
+      </p>
+      {{ partialCached "nav.html" . }}
+    </header>
+
+    {{ block "main" . }}{{ end }}
+
+    {{ partial "footer.html" . }}
+  </body>
+</html>

@@ -1,0 +1,10 @@
+<ul>
+  {{ range first 4 (where .Site.Pages.ByDate.Reverse "Section" "posts")}}
+    {{ if not (eq .Title "Posts") }}
+    <li>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      <p class="date">{{ if not .Date.IsZero }}<time>{{ .Date.Format "02. 01. 2006" }}</time> {{ end }}</p>
+    </li>
+    {{ end }}
+  {{ end }}
+</ul>

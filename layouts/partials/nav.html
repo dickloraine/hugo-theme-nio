@@ -1,0 +1,7 @@
+<nav>
+  {{ with .Site.Menus.main }}
+    {{ range . }}
+      <a href='{{ .URL }}' title="{{ .Name }}">{{ .Name }}</a>
+    {{ end }}
+  {{ end }}
+</nav>

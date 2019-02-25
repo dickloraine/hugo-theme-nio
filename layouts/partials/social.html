@@ -1,0 +1,16 @@
+<a
+  href='{{ "index.xml" | absURL }}'
+  rel="noopener alternate"
+  type="application/rss+xml"
+  title="rss"
+  target="_blank"
+  >{{ partial "icon.html" "rss" }}</a
+>
+{{ range.Site.Params.social }}
+<a
+  href="{{ .url }}"
+  title="{{ .name }}"
+  target="_blank"
+  >{{ partial "icon.html" .name }}</a
+>
+{{ end }}

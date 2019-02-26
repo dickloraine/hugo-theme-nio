@@ -65,6 +65,6 @@ $table-hover-color:           $text-marked-color;
 $footnote-highlight-color:    $text-marked-color;
 
 $code-inline-color:           $main-color;
-$code-bg-color:               rgba( $main-color, .13 );
-$code-text-color:             $text-color;
-$code-highlight-color:        $main-color;
+@if $code-bg-color {
+  $code-bg-color:             rgba( $main-color, .13 );
+}

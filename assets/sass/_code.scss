@@ -5,6 +5,9 @@ code {
   font-size: $code-font-size;
   overflow: auto;
   white-space: pre-wrap;
+  @if $pygmentsUseClasses {
+    color: $code-inline-color;
+  }
 
   @media print {
     white-space: pre-wrap;
@@ -16,8 +19,54 @@ div.highlight {
 
   pre {
     padding: 5px 10px;
-    @if $code-bg-color {
-      background-color: $code-bg-color !important;
-    }
   }
+}
+
+@if $pygmentsUseClasses {
+
+  div.highlight code { color: $code-text-color; }
+  /* Background */ .chroma { background-color: $code-bg-color; color: $code-text-color;}
+  /* LineTableTD */ .chroma .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }
+  /* LineTable */ .chroma .lntable { border-spacing: 0; padding: 0; margin: 0; border: 0; width: auto; overflow: auto; display: block; }
+  /* LineHighlight */ .chroma .hl { display: block; width: 100%;background-color: #ffffcc }
+  /* LineNumbersTable */ .chroma .lnt { margin-right: 0.4em; padding: 0 0.4em 0 0.4em; }
+  /* LineNumbers */ .chroma .ln { margin-right: 0.4em; padding: 0 0.4em 0 0.4em; }
+  /* Keyword */ .chroma .k { color: $code-highlight-color; }
+  /* KeywordConstant */ .chroma .kc { color: $code-highlight-color; }
+  /* KeywordDeclaration */ .chroma .kd { color: $code-highlight-color; }
+  /* KeywordNamespace */ .chroma .kn { color: $code-highlight-color; }
+  /* KeywordPseudo */ .chroma .kp { color: $code-highlight-color; }
+  /* KeywordReserved */ .chroma .kr { color: $code-highlight-color; }
+  /* KeywordType */ .chroma .kt { color: $code-highlight-color; }
+  /* NameClass */ .chroma .nc { font-weight: bold; color: $code-highlight-color; }
+  /* NameEntity */ .chroma .ni { font-weight: bold; color: $code-highlight-color; }
+  /* NameException */ .chroma .ne { font-weight: bold; color: $code-highlight-color; }
+  /* NameNamespace */ .chroma .nn { font-weight: bold ; color: $code-highlight-color;}
+  /* NameTag */ .chroma .nt { font-weight: bold; color: $code-highlight-color; }
+  /* LiteralString */ .chroma .s { font-style: italic }
+  /* LiteralStringAffix */ .chroma .sa { font-style: italic }
+  /* LiteralStringBacktick */ .chroma .sb { font-style: italic }
+  /* LiteralStringChar */ .chroma .sc { font-style: italic }
+  /* LiteralStringDelimiter */ .chroma .dl { font-style: italic }
+  /* LiteralStringDoc */ .chroma .sd { font-style: italic }
+  /* LiteralStringDouble */ .chroma .s2 { font-style: italic }
+  /* LiteralStringEscape */ .chroma .se { font-weight: bold; font-style: italic }
+  /* LiteralStringHeredoc */ .chroma .sh { font-style: italic }
+  /* LiteralStringInterpol */ .chroma .si { font-weight: bold; font-style: italic }
+  /* LiteralStringOther */ .chroma .sx { font-style: italic }
+  /* LiteralStringRegex */ .chroma .sr { font-style: italic }
+  /* LiteralStringSingle */ .chroma .s1 { font-style: italic }
+  /* LiteralStringSymbol */ .chroma .ss { font-style: italic }
+  /* Operator */ .chroma .o { color: $code-highlight-color; }
+  /* OperatorWord */ .chroma .ow { color: $code-highlight-color; }
+  /* Comment */ .chroma .c { font-style: italic }
+  /* CommentHashbang */ .chroma .ch { font-style: italic }
+  /* CommentMultiline */ .chroma .cm { font-style: italic }
+  /* CommentSingle */ .chroma .c1 { font-style: italic }
+  /* CommentSpecial */ .chroma .cs { font-style: italic }
+  /* GenericEmph */ .chroma .ge { font-style: italic }
+  /* GenericHeading */ .chroma .gh { font-weight: bold }
+  /* GenericPrompt */ .chroma .gp { font-weight: bold }
+  /* GenericStrong */ .chroma .gs { font-weight: bold }
+  /* GenericSubheading */ .chroma .gu { font-weight: bold }
 }

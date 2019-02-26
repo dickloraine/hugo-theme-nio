@@ -9,7 +9,7 @@ $text-marked-color: {{ .Param "style.text-marked-color" }};
 $button-style: {{ .Param "style.button-style" }};
 $pagination-style: {{ .Param "style.pagination-style" }};
 $simple-footer: {{ .Param "style.simple-footer" }};
-$code-bg-color: {{ .Param "style.custom-code-bg-color" }};
+$pygmentsUseClasses: {{ .Param "style.pygmentsUseClasses" }};
 
 @import 'functions';
 @import 'variables';

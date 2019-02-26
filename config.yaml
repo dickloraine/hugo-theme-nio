@@ -1,10 +1,12 @@
 DefaultContentLanguage: en
 languageCode: en-US
 
-# add these three lines to the main config file
+# if pygmentsUseClasses is true, pygmentsStyle is ignored and a simple style
+# based on your colors is used
 FootnoteReturnLinkContents: ↩
 pygmentsCodeFences: true
 pygmentsStyle: friendly
+pygmentsUseClasses: &pygmentsUseClasses true
 
 params:
   comments: true
@@ -34,7 +36,7 @@ params:
     button-style: 1
     pagination-style: 1
     simple-footer: false
-    custom-code-bg-color: false
+    pygmentsUseClasses: *pygmentsUseClasses
   about: |
     Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
 

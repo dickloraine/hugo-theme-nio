@@ -27,12 +27,12 @@ div.highlight {
 /* LineHighlight */ .chroma .hl { display: block; width: 100%;background-color: #ffffcc }
 /* LineNumbersTable */ .chroma .lnt { margin-right: 0.4em; padding: 0 0.4em 0 0.4em; }
 /* LineNumbers */ .chroma .ln { margin-right: 0.4em; padding: 0 0.4em 0 0.4em; }
-/* Keyword */ .chroma .k { color: $code-highlight-color; }
-/* KeywordConstant */ .chroma .kc { color: $code-highlight-color; }
-/* KeywordDeclaration */ .chroma .kd { color: $code-highlight-color; }
-/* KeywordNamespace */ .chroma .kn { color: $code-highlight-color; }
-/* KeywordPseudo */ .chroma .kp { color: $code-highlight-color; }
-/* KeywordReserved */ .chroma .kr { color: $code-highlight-color; }
+/* Keyword */ .chroma .k { font-weight: bold; color: $code-highlight-color; }
+/* KeywordConstant */ .chroma .kc { font-weight: bold; color: $code-highlight-color; }
+/* KeywordDeclaration */ .chroma .kd { font-weight: bold; color: $code-highlight-color; }
+/* KeywordNamespace */ .chroma .kn { font-weight: bold; color: $code-highlight-color; }
+/* KeywordPseudo */ .chroma .kp { font-weight: bold; color: $code-highlight-color; }
+/* KeywordReserved */ .chroma .kr { font-weight: bold; color: $code-highlight-color; }
 /* KeywordType */ .chroma .kt { color: $code-highlight-color; }
 /* NameClass */ .chroma .nc { font-weight: bold; color: $code-highlight-color; }
 /* NameEntity */ .chroma .ni { font-weight: bold; color: $code-highlight-color; }

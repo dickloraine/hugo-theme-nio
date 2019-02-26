@@ -12,6 +12,7 @@ params:
   comments: true
   toc: true
   toc-wordcount: 1000
+  zoom: false
   social:
     - name: facebook
       url: www.google.com

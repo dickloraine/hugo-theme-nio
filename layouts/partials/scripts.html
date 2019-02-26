@@ -32,11 +32,11 @@
 </script>
 {{ end }}
 
-{{ if isset ($.Param "zoom") }}
+{{ if ($.Param "zoom") }}
 <script src='{{ "js/zooming.min.js" | relURL }}'></script>
 <script>
   new Zooming({
-    bgColor: "rgb(255, 255, 255)",
+    bgColor: {{ .Param "style.bg-color" }},
     bgOpacity: 1,
     scaleBase: 0.7,
     scaleExtra: 0.5

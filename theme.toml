@@ -1,0 +1,12 @@
+name = "Nio Theme"
+license = "MIT"
+licenselink = "https://github.com/dickloraine/hugo-theme-nio/blob/master/LICENSE.md"
+description = "A simple blog theme with adjusting colors."
+homepage = "https://github.com/dickloraine/hugo-theme-nio"
+tags = ["blog"]
+features = []
+min_version = 0.19
+
+[author]
+  name = "dickloraine"
+  homepage = "https://github.com/dickloraine/hugo-theme-nio"

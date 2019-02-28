@@ -2,7 +2,7 @@ code {
   font-family: $mono-font;
   font-variant-ligatures: contextual;
   font-feature-settings: "calt" 1;
-  font-size: $code-font-size;
+  font-size: 0.9em;
   overflow: auto;
   white-space: pre-wrap;
   @if $pygmentsUseClasses {
@@ -26,6 +26,7 @@ div.highlight {
   div.highlight code {
     color: $code-text-color;
     font-style: normal;
+    font-size: 0.82em;
   }
 
   .chroma {

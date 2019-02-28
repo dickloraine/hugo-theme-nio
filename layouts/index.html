@@ -23,9 +23,11 @@
         <img src="{{ .Params.article_banner}}" alt="article banner" />
       </p>
     {{ end }}
-    <p>{{ .Summary }}
-      <a href="{{ .RelPermalink }}">{{ i18n "continue_reading" }}...</a>
-    </p>
+    {{ if .Params.summary | default true }}
+      <p>{{ .Summary }}
+        <a href="{{ .RelPermalink }}">{{ i18n "continue_reading" }}...</a>
+      </p>
+    {{ end }}
   </section>
   {{ end }}
 

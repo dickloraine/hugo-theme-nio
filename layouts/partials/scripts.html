@@ -26,7 +26,7 @@
     tocSelector: "#tocbot",
     contentSelector: "#post",
     headingSelector: "h1, h2, h3",
-    collapseDepth: 3,
+    collapseDepth: {{ $.Param "toc-collapse-depth" }},
     orderedList: false
   });
 </script>

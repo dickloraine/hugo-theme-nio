@@ -16,6 +16,7 @@ params:
   comments: true
   toc: true
   toc-wordcount: 1000
+  toc-collapse-depth: 2
   zoom: false
   social:
     - name: facebook

@@ -109,6 +109,11 @@ ul {
 
 blockquote {
   font-style: italic;
+
+  @if $quote-style == 2 {
+    padding-left: 1em;
+    border-left: $main-color solid 3px;
+  }
 }
 
 table {

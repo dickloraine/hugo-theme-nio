@@ -8,6 +8,7 @@ $hover-color: {{ .Param "style.hover-color" }};
 $text-marked-color: {{ .Param "style.text-marked-color" }};
 $button-style: {{ .Param "style.button-style" }};
 $pagination-style: {{ .Param "style.pagination-style" }};
+$quote-style: {{ .Param "style.quote-style" }};
 $simple-footer: {{ .Param "style.simple-footer" }};
 $pygmentsUseClasses: {{ .Param "style.pygmentsUseClasses" }};
 

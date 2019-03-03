@@ -221,6 +221,17 @@ a.footnoteRef {
   }
 }
 
+.series-pagination {
+  @extend .pagination;
+  display: grid;
+  grid-template: "older series newer" / 1fr 1fr 1fr;
+
+  .series {
+    justify-self: center;
+    grid-area: series;
+  }
+}
+
 .button-container {
   text-align: center;
   margin: 2em 1em;

@@ -26,23 +26,11 @@
     </p>
     {{ end }}
 
-    <!-- Use regex to wrap images in figures if an alt text is given -->
     {{ partial "img2fig.html" . }}
 
     {{ partial "disqus.html" . }}
 
-    <p class="pagination">
-      {{ with.PrevInSection }}{{ if . }}
-        <a href="{{ .RelPermalink }}" class="older"
-          >{{ partial "icon.html" "left" }}{{ .Title }}</a
-        >
-      {{ end }}{{ end }}
-      {{ with.NextInSection }}{{ if . }}
-        <a href="{{ .RelPermalink }}" class="newer"
-          >{{ .Title }}{{ partial "icon.html" "right" }}</a
-        >
-      {{ end }}{{ end }}
-    </p>
+    {{ partial "post-pagination.html" . }}
   </article>
 </main>
 

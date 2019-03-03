@@ -8,6 +8,10 @@ pygmentsCodeFences: true
 pygmentsStyle: friendly
 pygmentsUseClasses: &pygmentsUseClasses true
 
+taxonomies:
+  series: series
+  tag: tags
+
 params:
   comments: true
   toc: true

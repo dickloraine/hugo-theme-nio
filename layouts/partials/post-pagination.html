@@ -1,0 +1,35 @@
+{{ if isset .Params "series" }}
+  {{ range where .Site.Pages.ByDate "Params.series" .Params.series }}
+    {{ if gt $.Date.Unix .Date.Unix }}
+      {{ $.Scratch.Set "previous" .Permalink }}
+    {{ end }}
+  {{ end }}
+  {{ range where .Site.Pages.ByDate.Reverse "Params.series" .Params.series }}
+    {{ if lt $.Date.Unix .Date.Unix }}
+      {{ $.Scratch.Set "next" .Permalink }}
+    {{ end }}
+  {{ end }}
+  <p class="series-pagination">
+      {{ if $.Scratch.Get "previous" }}
+      <a href='{{ $.Scratch.Get "previous" }}' class="older">{{ partial "icon.html" "left" }}{{ i18n "older_posts" }}</a>
+      {{ end }}
+
+      <a href='{{ "/series/" | relLangURL }}{{ .Params.series | urlize }}'  class="series">{{ .Params.series }}</a>
+
+      {{ if $.Scratch.Get "next" }}
+      <a href='{{ $.Scratch.Get "next" }}' class="newer">{{ i18n "newer_posts" }}{{ partial "icon.html" "right" }}</a>
+    {{ end }}
+  </p>
+
+{{ else }}
+  <p class="pagination">
+    {{ with.PrevInSection }}{{ if . }}
+      <a href="{{ .RelPermalink }}" class="older"
+        >{{ partial "icon.html" "left" }}{{ .Title }}</a>
+    {{ end }}{{ end }}
+    {{ with.NextInSection }}{{ if . }}
+      <a href="{{ .RelPermalink }}" class="newer"
+        >{{ .Title }}{{ partial "icon.html" "right" }}</a>
+    {{ end }}{{ end }}
+  </p>
+{{ end }}

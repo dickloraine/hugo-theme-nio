@@ -22,6 +22,12 @@ other = "Ältere Artikel"
 [newer_posts]
 other = "Neuere Artikel"
 
+[previous]
+other = "voriger Artikel"
+
+[next]
+other = "nächster Artikel"
+
 [contents]
 other = "Inhalt"
 

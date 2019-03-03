@@ -11,13 +11,13 @@
   {{ end }}
   <p class="series-pagination">
       {{ if $.Scratch.Get "previous" }}
-      <a href='{{ $.Scratch.Get "previous" }}' class="older">{{ partial "icon.html" "left" }}{{ i18n "older_posts" }}</a>
+      <a href='{{ $.Scratch.Get "previous" }}' class="older">{{ partial "icon.html" "left" }}{{ i18n "previous" }}</a>
       {{ end }}
 
       <a href='{{ "/series/" | relLangURL }}{{ .Params.series | urlize }}'  class="series">{{ .Params.series }}</a>
 
       {{ if $.Scratch.Get "next" }}
-      <a href='{{ $.Scratch.Get "next" }}' class="newer">{{ i18n "newer_posts" }}{{ partial "icon.html" "right" }}</a>
+      <a href='{{ $.Scratch.Get "next" }}' class="newer">{{ i18n "next" }}{{ partial "icon.html" "right" }}</a>
     {{ end }}
   </p>
 

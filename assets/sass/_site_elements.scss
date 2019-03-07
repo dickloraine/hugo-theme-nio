@@ -1,12 +1,14 @@
 header#site-header {
   grid-area: header;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   padding: 0 1em 0.3rem 1em;
   margin: 0;
-  height: 3rem;
   background-color: $site-header-color;
-  @include desktop {
+  @include not_phone {
+    flex-direction: row;
+    height: 3rem;
     padding: 0 10% 0.3rem 10%;
   }
 

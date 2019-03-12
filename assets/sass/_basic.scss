@@ -153,8 +153,8 @@ a.footnoteRef {
   position: relative;
 }
 
-.MathJax_CHTML {
-  font-size: 1em !important;
+.MathJax,
+.MathJax_Display {
   white-space: pre-wrap !important;
 }
 
@@ -164,6 +164,7 @@ a.footnoteRef {
   margin-bottom: 1em;
   color: $meta-color;
   background-color: $meta-bg-color;
+  text-align: left;
 
   p,
   time {

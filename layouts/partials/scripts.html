@@ -2,19 +2,24 @@
 <script
   type="text/javascript"
   async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_HTMLorMML"
 >
   MathJax.Hub.Config({
     tex2jax: {
-    inlineMath: [['$','$'], ['\\(','\\)']],
-    displayMath: [['$$','$$']],
-    processEscapes: true,
-    processEnvironments: true,
-    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-    TeX: {
-      equationNumbers: { autoNumber: "AMS" },
-      qextensions: ["AMSmath.js", "AMSsymbols.js"] },
-    }
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        qextensions: ["AMSmath.js", "AMSsymbols.js"]
+      },
+    },
+    "HTML-CSS": {
+      linebreaks: { automatic: true },
+      matchFontHeight: false,
+    },
   });
 </script>
 {{ end }}

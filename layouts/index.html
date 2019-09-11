@@ -1,5 +1,5 @@
 {{ define "main" }}
-{{ $paginator := .Paginate (where .Data.Pages "Type" "in" .Site.Params.mainSections) }}
+{{ $paginator := .Paginator }}
 <main>
   {{ range $paginator.Pages }}
   <section id="home-posts">
@@ -23,7 +23,7 @@
         <img src="{{ .Params.article_banner}}" alt="article banner" />
       </p>
     {{ end }}
-    {{ if .Params.summary | default true }}
+    {{ if not .Params.no_summary }}
       <p>{{ .Summary }}
         <a href="{{ .RelPermalink }}">{{ i18n "continue_reading" }}...</a>
       </p>

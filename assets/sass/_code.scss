@@ -85,16 +85,16 @@ div.highlight {
     .nf { color: inherit; }
 
     // Literal
-    .l { color: $hover-color }
+    .l { color: $secondary-color }
 
     // Strings
     .s, .ld, .sa, .sb, .sc, .dl, .sd, .s2, .se, .sh, .si, .sx, .sr, .s1, .ss {
-      color: $hover-color;
+      color: $secondary-color;
     }
 
     // Numbers
     .m, .mb, .mf, .mh, .mi, .il, .mo {
-      color: $hover-color;
+      color: $secondary-color;
     }
 
     // Operators
@@ -108,11 +108,11 @@ div.highlight {
     }
 
     // GenericDeleted
-    .gd { color: $hover-color }
+    .gd { color: $secondary-color }
     // GenericEmph
     .ge { font-style: italic }
     // GenericInserted
-    .gi { color: $hover-color }
+    .gi { color: $secondary-color }
     // GenericStrong
     .gs { font-weight: bold }
     // GenericSubheading

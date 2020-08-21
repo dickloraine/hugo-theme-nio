@@ -18,11 +18,11 @@ $article-nav-font-size: $base-font-size - 1;
 // Colors
 $background-color:            $bg-color;
 $text-color:                  text-color($bg-color);
-$home-color:                  text-color($main-color);
-$nav-color:                   text-color($main-color);
+$home-color:                  text-color($primary-color);
+$nav-color:                   text-color($primary-color);
 
-$header-hover-color:          text-color($main-color);
-$site-header-color:           $main-color;
+$header-hover-color:          text-color($primary-color);
+$site-header-color:           $primary-color;
 $site-post-title-color:       heading-color();
 $site-post-title-bg-color:    inherit;
 
@@ -33,36 +33,33 @@ $meta-bg-color:               inherit;
 
 $aside-bg-color:              $bg-color;
 $aside-text-color:            $text-color;
-$aside-title-color:           text-color($main-color);
-$aside-title-bg-color:        $main-color;
+$aside-title-color:           text-color($primary-color);
+$aside-title-bg-color:        $primary-color;
 
-$link-color:                  distinguish($main-color, $text-color);
-$link-hover-color:            distinguish($main-color, $text-color);
+$footer-title-color:          $secondary-color;
+$footer-title-bg-color:       $primary-color;
+$footer-text-color:           highlight-color(text-color($primary-color), 15%);
+$footer-bg-color:             $primary-color;
+$footer-link-color:           highlight-color(text-color($primary-color), 15%);
+$footer-hover-color:          highlight-color(text-color($primary-color), 15%);
+$copyright-color:             highlight-color(text-color($primary-color), 20%);
 
-$footer-title-color:          $hover-color;
-$footer-title-bg-color:       $main-color;
-$footer-text-color:           highlight-color(text-color($main-color), 15%);
-$footer-bg-color:             $main-color;
-$footer-link-color:           highlight-color(text-color($main-color), 15%);
-$footer-hover-color:          highlight-color(text-color($main-color), 15%);
-$copyright-color:             highlight-color(text-color($main-color), 20%);
+$toc-active-color:            $primary-color;
 
-$toc-active-color:            $main-color;
+$pagination-text-color:       text-color(if($pagination-style == 1, $bg-color, $primary-color));
+$pagination-hover-text-color: text-color(if($pagination-style == 1, $bg-color, $primary-color));
+$pagination-bg-color:         if($pagination-style == 1, $bg-color, $primary-color);
 
-$pagination-text-color:       text-color(if($pagination-style == 1, $bg-color, $main-color));
-$pagination-hover-text-color: text-color(if($pagination-style == 1, $bg-color, $main-color));
-$pagination-bg-color:         if($pagination-style == 1, $bg-color, $main-color);
-
-$button-text-color:           text-color(if($button-style == 1, $bg-color, $main-color));
-$button-hover-text-color:     text-color($main-color);
-$button-bg-color:             if($button-style == 1, $bg-color, $main-color);
-$button-hover-bg-color:       $main-color;
+$button-text-color:           text-color(if($button-style == 1, $bg-color, $primary-color));
+$button-hover-text-color:     text-color($primary-color);
+$button-bg-color:             if($button-style == 1, $bg-color, $primary-color);
+$button-hover-bg-color:       $primary-color;
 
 $headings-color:              heading-color();
 $table-hover-color:           $text-marked-color;
 $footnote-highlight-color:    $text-marked-color;
 
-$code-inline-color:           $main-color;
-$code-bg-color:               rgba( $main-color, .13 );
+$code-inline-color:           $primary-color;
+$code-bg-color:               rgba( $primary-color, .13 );
 $code-text-color:             $text-color;
-$code-highlight-color:        $main-color;
+$code-highlight-color:        $primary-color;

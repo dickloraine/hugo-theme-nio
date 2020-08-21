@@ -55,12 +55,12 @@ $brightness-divisor: $red-magic-number + $green-magic-number +
 }
 
 @function heading-color() {
-  @if brightness($bg-color) < 65% and brightness($main-color) < 65% {
+  @if brightness($bg-color) < 65% and brightness($primary-color) < 65% {
     @return $light-text-color;
-  } @else if brightness($bg-color) >= 65% and brightness($main-color) >= 65% {
+  } @else if brightness($bg-color) >= 65% and brightness($primary-color) >= 65% {
     @return $dark-text-color;
   } @else {
-    @return $main-color;
+    @return $primary-color;
   }
 }
 

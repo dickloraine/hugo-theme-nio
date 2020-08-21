@@ -33,12 +33,15 @@ params:
       url: mailto:abc@example.com
   style:
     base-font-size: 14pt;
-    main-color: "#003151"
     bg-color: "#FFFFFF"
     dark-text-color: "#000000"
     light-text-color: "#FFFFFF"
-    hover-color: "#ff9700"
+    primary-color: "#003151"
+    secondary-color: "#ff9700"
+    tertiary-color: "#F00004"
     text-marked-color: "#ffa"
+    link-color: "#F00004"
+    link-hover-color: "#FA3235"
     button-style: 1
     pagination-style: 1
     quote-style: 1

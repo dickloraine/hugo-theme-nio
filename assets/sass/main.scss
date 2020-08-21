@@ -1,10 +1,12 @@
 // Style
 $base-font-size: {{ .Param "style.base-font-size" }};
-$main-color: {{ .Param "style.main-color" }};
+$primary-color: {{ .Param "style.primary-color" }};
 $dark-text-color: {{ .Param "style.dark-text-color" }};
 $light-text-color: {{ .Param "style.light-text-color" }};
 $bg-color: {{ .Param "style.bg-color" }};
-$hover-color: {{ .Param "style.hover-color" }};
+$secondary-color: {{ .Param "style.secondary-color" }};
+$link-color: {{ .Param "style.link-color" }};
+$link-hover-color: {{ .Param "style.link-hover-color" }};
 $text-marked-color: {{ .Param "style.text-marked-color" }};
 $button-style: {{ .Param "style.button-style" }};
 $pagination-style: {{ .Param "style.pagination-style" }};

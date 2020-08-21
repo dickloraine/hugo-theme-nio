@@ -186,7 +186,7 @@ a.footnoteRef {
 
 .pagination {
   display: grid;
-  grid-template: "older newer" / 1fr 1fr;
+  grid-template: "newer older" / 1fr 1fr;
   margin: 2em 0;
   padding: 0.3em;
 
@@ -212,12 +212,12 @@ a.footnoteRef {
   }
 
   .older {
-    justify-self: start;
+    justify-self: end;
     grid-area: older;
   }
 
   .newer {
-    justify-self: end;
+    justify-self: start;
     grid-area: newer;
   }
 

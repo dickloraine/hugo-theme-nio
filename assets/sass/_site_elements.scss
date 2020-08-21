@@ -228,6 +228,8 @@ aside {
 }
 
 aside#article-toc {
+  margin: 0;
+
   @include desktop {
     grid-area: aside;
   }
@@ -294,6 +296,7 @@ aside#article-toc {
     overflow-y: auto;
     overflow-x: hidden;
     height: 100vh;
+    min-width: 200px;
     background-color: $aside-bg-color;
 
     @include desktop {

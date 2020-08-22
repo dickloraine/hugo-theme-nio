@@ -40,12 +40,12 @@ params:
     secondary-color: "#ff9700"
     tertiary-color: "#F00004"
     text-marked-color: "#ffa"
-    link-color: "#F00004"
-    link-hover-color: "#FA3235"
+    link-color: "#03558C"
+    link-hover-color: "#03558C"
     button-style: 1
     pagination-style: 1
     quote-style: 1
-    simple-footer: false
+    simple-footer: true
     pygmentsUseClasses: *pygmentsUseClasses
   about: |
     Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
